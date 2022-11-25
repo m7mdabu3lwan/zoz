@@ -11,19 +11,65 @@
         android:layout_height="match_parent">
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/btnsign"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Button"
-            tools:layout_editor_absoluteX="158dp"
-            tools:layout_editor_absoluteY="499dp" />
+            android:layout_marginBottom="149dp"
+            android:text="signup"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/passconsign" />
 
         <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="257dp"
-            android:layout_height="175dp"
-            tools:layout_editor_absoluteX="77dp"
-            tools:layout_editor_absoluteY="86dp"
+            android:id="@+id/img"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="77dp"
+            android:layout_marginTop="86dp"
+            android:layout_marginEnd="77dp"
+            android:layout_marginBottom="77dp"
+            app:layout_constraintBottom_toTopOf="@+id/emailsign"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
             tools:src="@drawable/bedsaker" />
+
+        <EditText
+            android:id="@+id/emailsign"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="14dp"
+            android:ems="10"
+            android:hint="email:"
+            android:inputType="textEmailAddress"
+            app:layout_constraintBottom_toTopOf="@+id/passsign"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/img" />
+
+        <EditText
+            android:id="@+id/passsign"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:ems="10"
+            android:hint="password:"
+            android:inputType="textPassword"
+            app:layout_constraintBottom_toTopOf="@+id/passconsign"
+            app:layout_constraintStart_toStartOf="@+id/emailsign"
+            app:layout_constraintTop_toBottomOf="@+id/emailsign" />
+
+        <EditText
+            android:id="@+id/passconsign"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="35dp"
+            android:ems="10"
+            android:hint="confirm password:"
+            android:inputType="textPassword"
+            app:layout_constraintBottom_toTopOf="@+id/btnsign"
+            app:layout_constraintStart_toStartOf="@+id/passsign"
+            app:layout_constraintTop_toBottomOf="@+id/passsign" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>
